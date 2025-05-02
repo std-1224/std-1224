@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,10 +8,10 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import './styles.css';
+import './loop-style.css';
 
 // import required modules
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { EffectFade, Pagination } from 'swiper/modules';
 
 export default function Slider() {
     return (
@@ -24,11 +24,6 @@ export default function Slider() {
                 pagination={{
                     clickable: true,
                 }}
-                // autoplay={{
-                //     delay: 3500,
-                //     disableOnInteraction: false,
-                // }}
-                // loopAdditionalSlides={1}
                 modules={[EffectFade, Pagination]}
                 className="mySwiper"
             >

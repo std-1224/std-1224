@@ -1,18 +1,24 @@
-import { useState } from "react";
 import {
     Monitor,
     Database,
-    Layers,
     Award,
     Code,
     Globe,
-    Smartphone,
     Cpu,
     Palette
 } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+import '../components/basic-style.css';
+
 
 const AboutMe = ({ className }: any) => {
-    const [activeTestimonial, setActiveTestimonial] = useState(0);
 
     const testimonials = [
         {
@@ -54,17 +60,17 @@ const AboutMe = ({ className }: any) => {
                         <div className="flex items-center">
                             <span className="font-bold mr-2">RESIDENCE</span>
                             <span className="mx-2">. . . .</span>
-                            <span  className="text-gray-300">Hanoi</span>
+                            <span className="text-gray-300">Hanoi</span>
                         </div>
                         <div className="flex items-center">
                             <span className="font-bold mr-2">FREELANCE</span>
                             <span className="mx-2">. . . .</span>
-                            <span  className="text-gray-300">Available</span>
+                            <span className="text-gray-300">Available</span>
                         </div>
                         <div className="flex items-center">
                             <span className="font-bold mr-2">ADDRESS</span>
                             <span className="mx-2">. . . .</span>
-                            <span  className="text-gray-300">Hanoi, Vietnam</span>
+                            <span className="text-gray-300">Hanoi, Vietnam</span>
                         </div>
                     </div>
                 </div>
@@ -155,41 +161,37 @@ const AboutMe = ({ className }: any) => {
                     <span className="text-amber-500">T</span>estimonials
                 </h2>
 
-                <div className="relative bg-gray-800 bg-opacity-30 p-8 rounded-lg mb-8">
-                    <div className="flex flex-col items-center">
-                        <div className="mb-4 text-center">
-                            <span className="text-4xl text-gray-500">"</span>
-                            <p className="italic text-gray-400 px-4 md:px-8 mb-4">
-                                {testimonials[activeTestimonial].quote}
-                            </p>
-                            <span className="text-4xl text-gray-500 text-right block">"</span>
-                        </div>
+                <Swiper pagination={{
+                    clickable: true,
+                }} modules={[Pagination]} navigation={true} loop={true} spaceBetween={30} className="mySwiper" >
+                    {testimonials.map((testimonial, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="relative bg-gray-800 bg-opacity-30 p-8 h-full w-full">
+                                <div className="flex flex-col items-center">
+                                    <div className="mb-4 text-center">
+                                        <p className="italic text-gray-400 px-4 md:px-8 mb-4 tracking-wide">
+                                            ❝ &nbsp; {testimonial.quote} &nbsp;❞
+                                        </p>
+                                    </div>
 
-                        <div className="flex flex-col items-center">
-                            <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                                <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                                    <svg className="w-12 h-12 text-gray-500" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="currentColor" />
-                                        <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z" fill="currentColor" />
-                                    </svg>
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                                            <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                                                <svg className="w-12 h-12 text-gray-500" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="currentColor" />
+                                                    <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z" fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <h4 className="font-bold text-lg">{testimonial.author}</h4>
+                                        <p className="text-sm text-gray-400">{testimonial.position}</p>
+                                    </div>
                                 </div>
                             </div>
-                            <h4 className="font-bold text-lg">{testimonials[activeTestimonial].author}</h4>
-                            <p className="text-sm text-gray-400">{testimonials[activeTestimonial].position}</p>
-                        </div>
-                    </div>
+                        </SwiperSlide>
+                    ))}
 
-                    <div className="flex justify-center mt-8 space-x-2">
-                        {testimonials.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setActiveTestimonial(index)}
-                                className={`w-2 h-2 rounded-full ${index === activeTestimonial ? 'bg-amber-500' : 'bg-gray-600'}`}
-                                aria-label={`View testimonial ${index + 1}`}
-                            />
-                        ))}
-                    </div>
-                </div>
+                </Swiper>
             </section>
 
             {/* Fun Facts Section */}
