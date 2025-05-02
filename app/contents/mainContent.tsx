@@ -2,27 +2,20 @@
 import MainContentSidebar from './contentSidebar';
 import ContentProfile from './contentProfile';
 import ContentSection from './contentSection';
-import { useState } from 'react';
-const MainContent = () => {
-
-    const [activeTab, setActiveTab] = useState('aboutMe');
-    // aboutMe, works, stats, contact, guestBook, resume
-
+const MainContent = ({ setSidebarOpen, activeTab, setActiveTab }: any) => {
     return (
-        <div className="flex bg-gray-900 text-white max-h-[70vh] overflow-y-auto">
+        <div className="flex bg-gray-900 text-white lg:h-[70vh] overflow-y-auto" >
             {/* Sidebar */}
 
-            <MainContentSidebar setActiveTab={setActiveTab} activeTab={activeTab}/>
+            <MainContentSidebar setActiveTab={setActiveTab} activeTab={activeTab} setSidebarOpen={setSidebarOpen} />
 
             {/* Main Content */}
-            <div className="flex-1 flex">
+            <div className="flex-1 flex lg:w-4xl xl:w-6xl 2xl:w-7xl">
                 {/* Profile Section */}
 
-                <ContentProfile />
-
+                {activeTab !== 'works' && <ContentProfile />}
                 {/* Content Section */}
-                <ContentSection activeTab={activeTab} className="w-[678px] h-[567px]"/>
-
+                <ContentSection activeTab={activeTab} className="w-full h-full" />
             </div>
 
         </div>

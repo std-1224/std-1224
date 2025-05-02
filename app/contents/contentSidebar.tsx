@@ -1,9 +1,9 @@
 import SidebarIcon from "../components/SidebarIcon";
 import { Eye, Send, User, BookOpen, PanelLeft, BarChart2 } from 'lucide-react';
-const MainContentSidebar = ({setActiveTab, activeTab}: any) => {
+const MainContentSidebar = ({setActiveTab, activeTab, setSidebarOpen}: any) => {
     return (
         <div className="w-[74px] bg-gray-800 flex flex-col items-center py-4 border-r border-gray-700">
-            <button className="p-3 hover:bg-gray-700 rounded-lg mb-8">
+            <button className="p-3 hover:bg-gray-700 rounded-lg mb-8 cursor-pointer" onClick={() => setSidebarOpen(true)}>
                 <PanelLeft size={20} />
             </button>
             <div className="flex-1 flex flex-col gap-2">

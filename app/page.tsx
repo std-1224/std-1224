@@ -8,24 +8,25 @@ import MainContent from './contents/mainContent';
 export default function Home() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const [activeTab, setActiveTab] = useState('aboutMe');
+  // aboutMe, works, stats, contact, guestBook, resume
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen">
       {/* open sidebar icon */}
       <button className='fixed z-40 flex items-center justify-center text-white rounded-full top-6 right-6 w-8 h-8 bg-orange-300 lg:hidden' onClick={() => setSidebarOpen(true)}>
         <BsList size={20} />
       </button>
 
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <MainContent />
+        <MainContent setSidebarOpen={setSidebarOpen} activeTab={activeTab} setActiveTab={setActiveTab} />
       </main>
 
       {/* Background Stars */}
       <StarsCanvas />
 
       {/* Sidebar */}
-      <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
+      <Sidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} activeTab={activeTab} setActiveTab={setActiveTab} />
 
     </div>
   );

@@ -3,14 +3,9 @@ import { Mail, Github, Linkedin, X, MessagesSquare, FileText, MessageCircle, Eye
 import SocialIcon from "./SocialIcon";
 import NavLink from "./NavLink";
 
-const Sidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
-    const [activeLink, setActiveLink] = useState('about');
-
-    const handleNavClick = (link: any) => {
-        setActiveLink(link);
-    };
+const Sidebar = ({ setSidebarOpen, sidebarOpen, setActiveTab, activeTab }: any) => {
     return (
-        <div className={`fixed lg:hidden inset-y-0 left-0 z-50 w-full sm:w-80 bg-gray-900 flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className={`fixed inset-y-0 left-0 z-50 w-full sm:w-80 bg-gray-900 flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
             {/* Close button */}
             <div className="flex justify-end p-4">
                 <button onClick={() => setSidebarOpen(false)} className="text-gray-400 hover:text-white">
@@ -39,46 +34,43 @@ const Sidebar = ({ setSidebarOpen, sidebarOpen }: any) => {
             {/* Navigation links */}
             <nav className="flex-1">
                 <NavLink
-                    href="/about"
                     icon={<User size={18} />}
                     text="About"
-                    isActive={activeLink === 'about'}
-                    onClick={() => handleNavClick('about')}
+                    isActive={activeTab === 'aboutMe'}
+                    onClick={() => {setActiveTab('aboutMe'); setSidebarOpen(false);}}
                 />
                 <NavLink
-                    href="/resume"
                     icon={<FileText size={18} />}
                     text="Resume"
-                    isActive={activeLink === 'resume'}
-                    onClick={() => handleNavClick('resume')}
+                    isActive={activeTab === 'resume'}
+                    onClick={() => {setActiveTab('resume'); setSidebarOpen(false);}}
                 />
                 <NavLink
                     href="/works"
                     icon={<Eye size={18} />}
                     text="Works"
-                    isActive={activeLink === 'works'}
-                    onClick={() => handleNavClick('works')}
+                    isActive={activeTab === 'works'}
+                    onClick={() => {setActiveTab('works'); setSidebarOpen(false);}}
                 />
                 <NavLink
                     href="/stats"
                     icon={<Grid size={18} />}
                     text="Stats"
-                    isActive={activeLink === 'stats'}
-                    onClick={() => handleNavClick('stats')}
+                    isActive={activeTab === 'stats'}
+                    onClick={() => {setActiveTab('stats'); setSidebarOpen(false);}}
                 />
                 <NavLink
                     href="/contact"
                     icon={<Send size={18} />}
                     text="Contact"
-                    isActive={activeLink === 'contact'}
-                    onClick={() => handleNavClick('contact')}
+                    isActive={activeTab === 'contact'}
+                    onClick={() => {setActiveTab('contact'); setSidebarOpen(false);}}
                 />
                 <NavLink
-                    href="/guest-book"
                     icon={<BookOpen size={18} />}
                     text="Guest Book"
-                    isActive={activeLink === 'guest-book'}
-                    onClick={() => handleNavClick('guest-book')}
+                    isActive={activeTab === 'guestBook'}
+                    onClick={() => {setActiveTab('guestBook'); setSidebarOpen(false);}}
                 />
             </nav>
 

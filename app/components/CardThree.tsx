@@ -78,6 +78,7 @@ export function Card({ url, website, ...props }: CardProps) {
             transparent
             side={THREE.DoubleSide}
             onPointerOver={pointerOver}
+            
             onClick={(e) => {
                 e.stopPropagation()
                 window.open(website, '_blank')

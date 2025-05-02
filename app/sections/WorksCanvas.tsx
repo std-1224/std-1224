@@ -4,9 +4,9 @@ import '../util'
 import { Banner, Carousel, Rig } from '../components/CardThree'
 const WorksCanvas = () => {
   return (
-    <Canvas camera={{ position: [0, 0, 100], fov: 15 }}>
+    <Canvas camera={{ position: [0, 0, 100], fov: 15 }}  >
       <fog attach="fog" args={['#a79', 8.5, 12]} />
-      <ScrollControls pages={4} infinite>
+      <ScrollControls pages={4} infinite style={{scrollbarWidth: 'none'}}>
         <Rig rotation={[0, 0, 0.15]}>
           <Carousel />
         </Rig>
