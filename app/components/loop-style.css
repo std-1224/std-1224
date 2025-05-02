@@ -14,11 +14,11 @@
     width: 100%;
 }
 
-.swiper-pagination {
-    display: none;
-}
-
 .swiper-button-next,
 .swiper-button-prev {
     display: none;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fe9a00;
 }
