@@ -1,28 +1,42 @@
+// Map.tsx
 import {
     GoogleMap,
-    LoadScript,
+    useJsApiLoader,
     Marker
 } from '@react-google-maps/api';
 import cx from 'classnames';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { GOOGLE_MAPS_API_KEY } from '../config/env';
+import { useMapStore } from '../store/mapStore'; // Import the store
 
 interface Props {
     className?: string;
     width?: string;
     height?: string;
+    googleMapsApiKey?: string;
 }
 
 const Map: React.FC<Props> = ({
     className,
     width = '100%',
-    height = '300px'
+    height = '300px',
+    googleMapsApiKey = GOOGLE_MAPS_API_KEY
 }) => {
-    const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    // Use the store instead of useState
+    const {
+        userLocation,
+        isLoading,
+        defaultLocation,
+        setUserLocation,
+        setIsLoading
+    } = useMapStore();
 
-    // Default location (San Francisco)
-    const defaultLocation = { lat: 37.7749, lng: -122.4194 };
+    // Use the useJsApiLoader hook to check if Google Maps API is already loaded
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey,
+        libraries: ['geometry']
+    });
 
     // Container style with explicit dimensions
     const mapContainerStyle = {
@@ -52,7 +66,7 @@ const Map: React.FC<Props> = ({
             console.warn('Geolocation is not supported by this browser');
             setIsLoading(false);
         }
-    }, []);
+    }, []); // Only run on mount
 
     // Center map on user location if available, otherwise use default
     const center = userLocation || defaultLocation;
@@ -66,7 +80,8 @@ const Map: React.FC<Props> = ({
                 position: 'relative'
             }}
         >
-            {isLoading && (
+            {/* Show loading state when map is loading or when getting user location */}
+            {(isLoading || !isLoaded) && (
                 <div
                     style={{
                         position: 'absolute',
@@ -86,10 +101,8 @@ const Map: React.FC<Props> = ({
                 </div>
             )}
 
-            <LoadScript
-                googleMapsApiKey={GOOGLE_MAPS_API_KEY}
-                libraries={['geometry']}
-            >
+            {/* Render map only when Google Maps script is loaded */}
+            {isLoaded && (
                 <GoogleMap
                     mapContainerStyle={mapContainerStyle}
                     center={center}
@@ -107,7 +120,7 @@ const Map: React.FC<Props> = ({
                         />
                     )}
                 </GoogleMap>
-            </LoadScript>
+            )}
         </div>
     );
 };
