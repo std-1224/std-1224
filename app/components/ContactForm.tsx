@@ -25,40 +25,24 @@ const ContactSection = () => {
 
     return (
         <div className="w-full mx-auto mt-8">
-            <div className="grid grid-rows-2 md:grid-cols-2 gap-4 mb-6 w-full">
-                <div className="flex">
-                    <div className="font-bold text-base mr-4">ADDRESS</div>
-                    <div className="text-gray-400 flex">
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="ml-2">Hanoi, Vietnam</span>
-                    </div>
-                </div>
 
-                <div className="flex">
-                    <div className="font-bold text-base mr-4">EMAIL</div>
-                    <div className="text-gray-400 flex ">
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="ml-2">kalkaudy@gmail.com</span>
-                    </div>
-                </div>
-
-                <div className="flex">
-                    <div className="font-bold text-base mr-4">FREELANCE</div>
-                    <div className="text-gray-400 flex ">
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="mx-[1px]">•</span>
-                        <span className="ml-2">Available</span>
-                    </div>
-                </div>
-            </div>
+            <ul className='grid grid-cols-2 mt-10 location gap-y-2 mb-10'>
+                <li className='text-gray-300 text-base uppercase'>
+                    address
+                    <span className='mx-2'>. . . .</span>
+                    <span className='text-gray-400 normal-case'>Hanoi, Vietnam</span>
+                </li>
+                <li className='text-gray-300 text-base uppercase'>
+                    Email
+                    <span className='mx-2'>. . . .</span>
+                    <span className='text-gray-400 normal-case'>kalkaudy@gmail.com</span>
+                </li>
+                <li className='text-gray-300 text-base uppercase'>
+                    Freelance
+                    <span className='mx-2'>. . . .</span>
+                    <span className='text-gray-400 normal-case'>Available</span>
+                </li>
+            </ul>
 
             {/* Contact Form */}
             <div className="flex items-center mb-8">
