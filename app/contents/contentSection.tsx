@@ -9,12 +9,12 @@ const ContentSection = ({ activeTab, className }: any) => {
     return (
         <>
             {/* Content based on activeTab */}
-            {activeTab === 'aboutMe' && <AboutMe className={className}/>}
-            {activeTab === 'works' && <Works className={className}/>}
-            {activeTab === 'stats' && <Stats className={className}/>}
-            {activeTab === 'contact' && <Contact className={className}/>}
-            {activeTab === 'guestBook' && <GuestBook className={className}/>}
-            {activeTab === 'resume' && <Resume className={className}/>}
+            {activeTab === 'aboutMe' && <AboutMe className={className} />}
+            {activeTab === 'works' && <Works className={className} />}
+            {activeTab === 'stats' && <Stats className={className} />}
+            {activeTab === 'contact' && <Contact className={className} />}
+            {activeTab === 'guestBook' && <GuestBook className={className} />}
+            {activeTab === 'resume' && <Resume className={className} />}
         </>
     );
 };

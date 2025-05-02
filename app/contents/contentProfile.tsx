@@ -1,14 +1,17 @@
+import Slider from "../components/Slider";
 import SocialIcon from "../components/SocialIcon";
 import { Mail, Github, Linkedin, Image, MessageCircle, Camera, Download } from 'lucide-react';
 
 const ContentProfile = () => {
     return (
-        <div className="w-80 bg-gray-800 flex flex-col relative">
+        <div className="lg:w-80 bg-gray-800 flex flex-col relative sm:w-[250px]">
             {/* Background Image */}
-            <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('./footer.jpg" }}></div>
+            <Slider />
+            {/* <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('./footer.jpg" }}></div> */}
 
             {/* Profile Info */}
             <div className="flex flex-col items-center -mt-14 px-6 z-10">
+                
                 <div className="rounded-full border-4 border-gray-800 overflow-hidden w-28 h-28">
                     <img src="./Anh Nguyen Ngoc Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
                 </div>
@@ -30,13 +33,13 @@ const ContentProfile = () => {
                     {/* Download CV Button */}
                     <button className="flex w-1/2 items-center border-r-1 cursor-pointer text-gray-400 justify-center gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
                         <Download size={16} />
-                        <span>DOWNLOAD CV</span>
+                        <span className="sm:text-[10px] lg:text-[14px]">DOWNLOAD CV</span>
                     </button>
 
                     {/* LinkedIn Button */}
                     <button className="w-1/2 flex items-center justify-center cursor-pointer text-gray-400 gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
                         <Linkedin size={16} />
-                        <span>MY LINKEDIN</span>
+                        <span className="sm:text-[10px] lg:text-[14px]">MY LINKEDIN</span>
                     </button>
 
                 </div>

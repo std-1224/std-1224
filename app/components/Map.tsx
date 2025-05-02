@@ -15,7 +15,7 @@ interface Props {
 
 const Map: React.FC<Props> = ({
     className,
-    width = '500px',
+    width = '100%',
     height = '300px'
 }) => {
     const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
