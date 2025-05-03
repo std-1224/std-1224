@@ -23,7 +23,7 @@ const Stats = ({ className }: any) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="bg-gray-800 p-6 rounded-lg">
                         <h3 className="text-xl font-bold mb-2">Main Stack</h3>
-                        <p className="text-gray-400">React, Vue, Web3</p>
+                        <p className="text-gray-400">React/Next.js, Vue/Nuxt.js, Node.js, Python, Django, AI/LLM Database Management</p>
                     </div>
 
                     <div className="bg-gray-800 p-6 rounded-lg">
@@ -100,7 +100,7 @@ const Stats = ({ className }: any) => {
                             </div>
                             <div>
                                 <h3 className="font-bold">WhatsApp</h3>
-                                <p className="text-gray-400 text-sm">Let's connect via Whatsapp. +358 469682735</p>
+                                <p className="text-gray-400 text-sm">Let's connect via Whatsapp. +84 978816300</p>
                             </div>
                         </div>
                         <div className="group">
@@ -115,7 +115,7 @@ const Stats = ({ className }: any) => {
                             </div>
                             <div>
                                 <h3 className="font-bold">Discord</h3>
-                                <p className="text-gray-400 text-sm">Let's connect via Discord. My username - anteroselin</p>
+                                <p className="text-gray-400 text-sm">Let's connect via Discord. My username - kalkaudy</p>
                             </div>
                         </div>
                         <div className="group">
@@ -138,7 +138,7 @@ const Stats = ({ className }: any) => {
                         </div>
                     </a>
 
-                    <a href="skype:username?call" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
+                    <a href="https://teams.microsoft.com/l/chat/?users=gilgamesh.1238.towork@outlook.com" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
                         <div className="flex items-center">
                             <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
                                 <Mic className="w-6 h-6 text-cyan-400" />
