@@ -1,15 +1,12 @@
 
 import { ExternalLink, BookOpen } from 'lucide-react';
 import { useState } from 'react';
+import { comments } from '../schema/work';
 const GuestBook = ({className}: any) => {
     const [comment, setComment] = useState('');
     const [name, setName] = useState('');
     const [saveInfo, setSaveInfo] = useState(false);
-    const comments = [
-        { name: "Stephan", date: "April 30, 2025 at 11:06 PM", text: "Amazing portfolio" },
-        { name: "KevinLeon", date: "December 9, 2024 at 7:35 PM", text: "perfect" },
-        { name: "James", date: "October 2, 2024 at 12:56 AM", text: "Impressive work, keep it up!" }
-    ];
+   
     return (
         <div className={`flex-1 p-8 overflow-y-auto ${className}`} style={{scrollbarWidth: 'thin'}}>
             <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">

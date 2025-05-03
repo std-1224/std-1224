@@ -4,11 +4,12 @@ import {
     Code,
     Server,
     CheckCircle,
-    Database,
     Globe,
     BarChart
 } from 'lucide-react';
+import { experiences } from '../schema/work';
 const Resume = ({ className }: any) => {
+
     return (
         <div className={`flex-1 p-8 overflow-y-auto ${className}`} style={{ scrollbarWidth: 'thin' }}>
             {/* Experience Section */}
@@ -19,117 +20,31 @@ const Resume = ({ className }: any) => {
                     </div>
                     <h2 className="text-xl font-bold uppercase">Experience</h2>
                 </div>
-
-                {/* Experience Item 1 */}
-                <div className="mb-12 border-b border-gray-800 pb-8">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">09/2024 - Current</div>
-                    </div>
-
-                    <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold">Sr. Full Stack & Chart Engineer</h3>
-                        <div className="flex items-center">
-                            <img src="/api/placeholder/24/24" alt="ChainStats logo" className="h-6 w-6 mr-2" />
-                            <span>ChainStats</span>
+                {experiences.map((experience, index) => (
+                    <div className="mb-12 border-b border-gray-800 pb-8" >
+                        <div className="flex justify-between items-start mb-2">
+                            <div className="bg-gray-700 text-xs px-2 py-1 rounded">{experience.startDate} - {experience.endDate !== "" ? experience.endDate : experience.status}</div>
                         </div>
-                    </div>
 
-                    <p className="text-gray-400 mb-4">ChainStats</p>
-                    <p className="text-gray-400">
-                        ChainStats Is Transforming How On-Chain Data Is Aggregated And Analyzed
-                        Through A Powerful Two-Part Ecosystem
-                    </p>
-                </div>
-
-                {/* Experience Item 2 */}
-                <div className="mb-12 border-b border-gray-800 pb-8">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">07/2023 - 09/2024</div>
-                    </div>
-
-                    <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold">Sr. Full Stack & Web3 Engineer</h3>
-                        <div className="flex items-center">
-                            <span className="text-green-500 font-bold">Upwork</span>
+                        <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-lg font-bold">{experience.job}</h3>
+                            <div className="flex items-center">
+                                <span className="text-green-500 font-bold">{experience.mark}</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <p className="text-gray-400 mb-4">Self-Employed, Freelancer</p>
-                    <p className="text-gray-400">
-                        As A Freelance Sr. Full Stack & Web3 Engineer, I Built Innovative Decentralized
-                        Applications While Managing My Own Business.
-                    </p>
-                </div>
+                        <p className="text-gray-400 mb-4">{experience.company}</p>
+                        <p className="text-gray-400">
+                            {experience.description}
+                        </p>
+                    </div >
+                ))
+                }
 
-                {/* Experience Item 3 */}
-                <div className="mb-12 border-b border-gray-800 pb-8">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">06/2022 - 06/2023</div>
-                    </div>
-
-                    <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold">Sr. Full Stack & Web3 Engineer</h3>
-                        <div className="flex items-center">
-                            <span className="bg-red-500 text-white px-2 py-1 font-bold">ARSNL</span>
-                        </div>
-                    </div>
-
-                    <p className="text-gray-400 mb-4">Arsin Art</p>
-                    <p className="text-gray-400">
-                        ARSNL Is An Integrated Performance Media And Marketing Agency, Born From
-                        Digital. Retail-Speed Fast. We Connect Brands To Their Best Audiences And Drive
-                        Action.
-                    </p>
-                </div>
-
-                {/* Experience Item 4 */}
-                <div className="mb-12 border-b border-gray-800 pb-8">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">01/2020 - 05/2022</div>
-                    </div>
-
-                    <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold">Lead Front-End Engineer</h3>
-                        <div className="flex items-center">
-                            <span className="text-gray-300 flex items-center">
-                                <img src="/api/placeholder/24/24" alt="Cropper logo" className="h-6 w-6 mr-2" />
-                                Cropper
-                            </span>
-                        </div>
-                    </div>
-
-                    <p className="text-gray-400 mb-4">Cropper</p>
-                    <p className="text-gray-400">
-                        Cropper Is An Automated Market Maker (AMM) Built On The Solana Blockchain
-                        Which Leverages The Central Order Book Of The Serum Decentralized Exchange
-                        (DEX) To Enable Lightning-Fast Trades, Shared Liquidity And New Features For
-                        Earning Yield.
-                    </p>
-                </div>
-
-                {/* Experience Item 5 */}
-                <div className="mb-12 border-b border-gray-800 pb-8">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">11/2017 - 12/2019</div>
-                    </div>
-
-                    <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-lg font-bold">Sr. React Engineer</h3>
-                        <div className="flex items-center">
-                            <span className="text-red-500 font-bold">VINCIT</span>
-                        </div>
-                    </div>
-
-                    <p className="text-gray-400 mb-4">Vincit</p>
-                    <p className="text-gray-400">
-                        A Group Of World-Class Talent With A Passion For The Power Of Digital
-                        Technology
-                    </p>
-                </div>
-            </section>
+            </section >
 
             {/* Education Section */}
-            <section className="p-2">
+            < section className="p-2" >
                 <div className="flex items-center mb-8">
                     <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center mr-4">
                         <GraduationCap className="text-gray-900" size={16} />
@@ -139,19 +54,30 @@ const Resume = ({ className }: any) => {
 
                 <div className="mb-6">
                     <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2013 - 2017</div>
+                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2013 - 2016</div>
                     </div>
 
-                    <h3 className="text-lg font-bold mb-2">University Of Helsinki</h3>
-                    <p className="text-gray-400 mb-4">Finland</p>
+                    <h3 className="text-lg font-bold mb-2">Ho Chi Minh City University of Information Technology</h3>
+                    <p className="text-gray-400 mb-4">Vietnam</p>
                     <p className="text-gray-400">
-                        University Of Helsinki Is One Of The Top Public Universities In Helsinki, FI.
+                        University Of HCMUT is One Of The National Universities In HCM, VN.
                     </p>
                 </div>
-            </section>
+                <div className="mb-6">
+                    <div className="flex justify-between items-start mb-2">
+                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2016 - 2020</div>
+                    </div>
+
+                    <h3 className="text-lg font-bold mb-2">Posts and Telecommunications Institute of Technology</h3>
+                    <p className="text-gray-400 mb-4">Vietnam</p>
+                    <p className="text-gray-400">
+                        University Of PTIT portal is One Of leading Universities In Hanoi, VN.
+                    </p>
+                </div>
+            </section >
 
             {/* Skills Section */}
-            <section className="p-2">
+            < section className="p-2" >
                 <div className="flex items-center mb-8">
                     <div className="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center mr-4">
                         <Code className="text-gray-900" size={16} />
@@ -172,12 +98,12 @@ const Resume = ({ className }: any) => {
                         <div className="mb-4">
                             <p className="text-sm mb-2">HTML5, CSS3, JS, TS</p>
                             <div className="w-full bg-gray-700 rounded-full h-2">
-                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '95%' }}></div>
+                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '100%' }}></div>
                             </div>
                         </div>
 
                         <div className="mb-4">
-                            <p className="text-sm mb-2">React, Vue, Angular</p>
+                            <p className="text-sm mb-2">React/Next.js, Vue/Nuxt.js, Angular</p>
                             <div className="w-full bg-gray-700 rounded-full h-2">
                                 <div className="bg-amber-500 h-2 rounded-full" style={{ width: '90%' }}></div>
                             </div>
@@ -193,21 +119,21 @@ const Resume = ({ className }: any) => {
                         <div className="mb-4">
                             <p className="text-sm mb-2">Responsive Design, RESTful API</p>
                             <div className="w-full bg-gray-700 rounded-full h-2">
-                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '100%' }}></div>
                             </div>
                         </div>
 
                         <div className="mb-4">
                             <p className="text-sm mb-2">Figma, Adobe XD</p>
                             <div className="w-full bg-gray-700 rounded-full h-2">
-                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '95%' }}></div>
                             </div>
                         </div>
 
                         <div className="mb-4">
                             <p className="text-sm mb-2">Tailwind CSS, Bootstrap</p>
                             <div className="w-full bg-gray-700 rounded-full h-2">
-                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '95%' }}></div>
+                                <div className="bg-amber-500 h-2 rounded-full" style={{ width: '100%' }}></div>
                             </div>
                         </div>
                     </div>
@@ -420,8 +346,8 @@ const Resume = ({ className }: any) => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     )
 }
 export default Resume;

@@ -62,3 +62,71 @@ export const worksArr: WorkItem[] = [
         website: 'https://yearnclassic.finance/ '
     },
 ]
+
+export const experiences = [
+    {
+        startDate: '09/2024',
+        endDate: '',
+        status: 'Current',
+        job: 'Sr. Full Stack & Chart Engineer',
+        company: 'ChainStats',
+        description: 'ChainStats Is Transforming How On-Chain Data Is Aggregated And Analyzed Through A Powerful Two-Part Ecosystem',
+        mark: 'ChainStats',
+    },
+    {
+        startDate: '07/2023',
+        endDate: '09/2024',
+        status: 'Freelancer',
+        job: 'Sr. Full Stack & Web3 Engineer',
+        company: 'Self-Employed, Freelancer',
+        description: 'As A Freelance Sr. Full Stack & Web3 Engineer, I Built Innovative Decentralized Applications While Managing My Own Business.',
+        mark: 'Upwork',
+    },
+    {
+        startDate: '06/2022',
+        endDate: '06/2023',
+        status: 'ARSNL',
+        job: 'Sr. Full Stack & Web3 Engineer',
+        company: 'Arsin Art',
+        description: 'ARSNL Is An Integrated Performance Media And Marketing Agency, Born From Digital. Retail-Speed Fast. We Connect Brands To Their Best Audiences And Drive Action.',
+        mark: 'ARSNL',
+    },
+    {
+        startDate: '01/2020',
+        endDate: '05/2022',
+        status: 'Cropper',
+        job: 'Lead Front-End Engineer',
+        company: 'Cropper',
+        description: 'Cropper Is An Automated Market Maker (AMM) Built On The Solana Blockchain Which Leverages The Central Order Book Of The Serum Decentralized Exchange (DEX) To Enable Lightning-Fast Trades, Shared Liquidity And New Features For Earning Yield.',
+        mark: 'Cropper',
+    },
+    {
+        startDate: '11/2017',
+        endDate: '12/2019',
+        status: 'VINCIT',
+        job: 'Sr. React Engineer',
+        company: 'Vincit',
+        description: 'A Group Of World-Class Talent With A Passion For The Power Of Digital Technology',
+        mark: 'VINCIT',
+    }
+
+]
+
+export const comments = [
+    { name: "Stephan", date: "April 30, 2025 at 11:06 PM", text: "Amazing portfolio" },
+    { name: "KevinLeon", date: "December 9, 2024 at 7:35 PM", text: "perfect" },
+    { name: "James", date: "October 2, 2024 at 12:56 AM", text: "Impressive work, keep it up!" }
+];
+
+export const testimonials = [
+    {
+        quote: "Working with Antero has been a pleasure. He provided excellent clarity on project requirements, scope and the vision of the project. All expectations and requirements were communicated upfront, and he was responsive to any of my requests for clarification. Antero - I enjoyed working with you and hope to have a long business relationship.",
+        author: "Arthur C.",
+        position: "CMO At Cropper"
+    },
+    {
+        quote: "Antero delivered our project ahead of schedule with exceptional quality. His blockchain expertise helped us overcome several technical challenges we'd been struggling with for months.",
+        author: "Jane D.",
+        position: "CTO at ARSNL"
+    }
+];
