@@ -2,7 +2,6 @@ import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
-
 const NUM_STARS = 1500; // Adjust the number of stars as needed
 
 const Stars = () => {
@@ -45,3 +44,5 @@ const StarsCanvas = () => (
 );
 
 export default StarsCanvas;
+
+
