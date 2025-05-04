@@ -53,7 +53,7 @@ export function Card({ url, website, ...props }: CardProps) {
     const ref = useRef<ImageWithMaterial>(null)
     const [hovered, hover] = useState<boolean>(false)
 
-    const pointerOver = (e: THREE.Event) => {
+    const pointerOver = (e: any) => {
         e.stopPropagation()
         hover(true)
     }
