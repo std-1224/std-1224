@@ -5,6 +5,10 @@ import { easing } from 'maath'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Image, useScroll, useTexture, } from '@react-three/drei'
+import '../util'
+import { MeshSineMat } from './MeshSineMaterial'
+import { BentPlane } from './BentPlaneGeometry'
+
 export function Rig({ rotation, children }: RigProps) {
     const ref = useRef<THREE.Group>(null)
     const scroll = useScroll()
@@ -75,7 +79,7 @@ export function Card({ url, website, ...props }: CardProps) {
             transparent
             side={THREE.DoubleSide}
             onPointerOver={pointerOver}
-            
+
             onClick={(e) => {
                 e.stopPropagation()
                 window.open(website, '_blank')
@@ -83,7 +87,7 @@ export function Card({ url, website, ...props }: CardProps) {
             onPointerOut={pointerOut}
             {...props}
         >
-            <bentPlaneGeometry args={[0.05, 1, 1, 20, 20]} />
+            <BentPlane args={[0.1, 1, 1, 20, 20]} />
         </Image>
     )
 }
@@ -112,39 +116,7 @@ export function Banner(props: BannerProps) {
     return (
         <mesh ref={ref} {...props}>
             <cylinderGeometry args={[2.4, 2.4, 0.14, 128, 16, true]} />
-            <meshSineMaterial
-                map={texture}
-                map-anisotropy={16}
-                map-repeat={[30, 1]}
-                side={THREE.DoubleSide}
-                toneMapped={false}
-            />
+            <MeshSineMat map={texture} map-anisotropy={16} map-repeat={[30, 1]} side={THREE.DoubleSide} toneMapped={false} />
         </mesh>
     )
-}
-
-// Define the bentPlaneGeometry and meshSineMaterial which are custom components
-// These would typically be in your util.ts file
-declare module 'three' {
-    export interface Object3DEventMap {
-        pointerover: THREE.Event;
-        pointerout: THREE.Event;
-    }
-}
-
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'bentPlaneGeometry': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-                args: [number, number, number, number, number];
-            };
-            'meshSineMaterial': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-                map?: THREE.Texture;
-                'map-anisotropy'?: number;
-                'map-repeat'?: [number, number];
-                side?: THREE.Side;
-                toneMapped?: boolean;
-            };
-        }
-    }
 }
