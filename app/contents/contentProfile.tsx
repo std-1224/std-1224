@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, Image, MessageCircle, Camera, Download } from '
 
 const ContentProfile = () => {
     return (
-        <div className="lg:w-80 bg-gray-800 flex flex-col relative sm:w-[250px]">
+        <div className="lg:w-80 bg-gray-800 lg:flex flex-col relative hidden">
             {/* Background Image */}
             <Slider />
             {/* <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url('./footer.jpg" }}></div> */}
