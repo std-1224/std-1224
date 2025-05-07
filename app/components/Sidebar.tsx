@@ -5,7 +5,7 @@ import NavLink from "./NavLink";
 
 const Sidebar = ({ setSidebarOpen, sidebarOpen, setActiveTab, activeTab }: any) => {
     return (
-        <div className={`fixed inset-y-0 left-0 z-50 w-full sm:w-80 bg-gray-900 flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className={`fixed inset-y-0 left-0 z-50 sm:w-80 w-full bg-gray-900 flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
             {/* Close button */}
             <div className="flex justify-end p-4">
                 <button onClick={() => setSidebarOpen(false)} className="text-gray-400 hover:text-white">
@@ -32,7 +32,7 @@ const Sidebar = ({ setSidebarOpen, sidebarOpen, setActiveTab, activeTab }: any) 
             </div>
 
             {/* Navigation links */}
-            <nav className="flex-1">
+            <nav className="flex-1 py-4 px-28 space-y-2 w-full">
                 <NavLink
                     icon={<User size={18} />}
                     text="About"
