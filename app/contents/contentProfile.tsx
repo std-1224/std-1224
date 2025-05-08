@@ -3,6 +3,16 @@ import SocialIcon from "../components/SocialIcon";
 import { Mail, Github, Linkedin, Image, MessageCircle, Camera, Download } from 'lucide-react';
 
 const ContentProfile = () => {
+    const handleDownloadCV = () => {
+        const fileName = 'CV_Anh_Nguyen_Ngoc_Phuc.pdf';
+        const filePath = `./${fileName}`;
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
     return (
         <div className="lg:w-80 bg-gray-800 lg:flex flex-col relative hidden">
             {/* Background Image */}
@@ -11,7 +21,7 @@ const ContentProfile = () => {
 
             {/* Profile Info */}
             <div className="flex flex-col items-center -mt-14 px-6 z-10">
-                
+
                 <div className="rounded-full border-4 border-gray-800 overflow-hidden w-28 h-28">
                     <img src="./Anh Nguyen Ngoc Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
                 </div>
@@ -31,8 +41,8 @@ const ContentProfile = () => {
                 <div className='flex flex-row w-full absolute bottom-0 h-12'>
 
                     {/* Download CV Button */}
-                    <button className="flex w-1/2 items-center border-r-1 cursor-pointer text-gray-400 justify-center gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
-                        <Download size={16} />
+                    <button onClick={() => handleDownloadCV()} className="flex w-1/2 items-center border-r-1 cursor-pointer text-gray-400 justify-center gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
+                        <Download size={16} className="animate-bounce text-yellow-400"/>
                         <span className="sm:text-[10px] lg:text-[14px]">DOWNLOAD CV</span>
                     </button>
 

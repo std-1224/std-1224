@@ -21,7 +21,7 @@ import { testimonials } from '../schema/work';
 
 const AboutMe = ({ className }: any) => {
 
-    
+
 
     return (
         <div className={`${className} flex-1 p-8 overflow-y-auto`} style={{ scrollbarWidth: 'thin' }}>
@@ -33,12 +33,8 @@ const AboutMe = ({ className }: any) => {
 
                 <div className="mb-10">
                     <p className="mb-6 leading-relaxed">
-                        Experienced Senior Full Stack Engineer with 8 years of web and blockchain
-                        development expertise. Led a $150K research project, deemed a "silver standard" by
-                        the client, and recognized as an ACM prize winner during college. Fine-tuned AI/ML-
-                        based algorithms, resulting in a 2-fold increase in client revenue. Committed to
-                        delivering high-quality code and clear communication, providing top-tier customer
-                        support for building exceptional online reputations.
+                        As a passionate and result-driven Full Stack Developer with 6+ years of hands-on experience designing, developing, and implementing applications and solutions using a range of technologies and programming languages.
+                        Seeking opportunities to work on challenging projects that will enhance my technical skills and knowledge in backend & frontend development, AI/LLM within a dynamic and innovative company.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
@@ -91,9 +87,9 @@ const AboutMe = ({ className }: any) => {
                                 <Cpu className="text-amber-500" size={24} />
                             </div>
                         </div>
-                        <h3 className="text-lg font-bold text-center mb-4">Blockchain</h3>
+                        <h3 className="text-lg font-bold text-center mb-4">AI / ML / LLM</h3>
                         <p className="text-gray-400 text-center">
-                            Blockchain consulting, development, integration, and education for various industries.
+                           AI/ML/LLM solutions for your business, including chatbots, recommendation systems, and more.
                         </p>
                     </div>
 

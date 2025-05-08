@@ -51,21 +51,9 @@ const Resume = ({ className }: any) => {
                     </div>
                     <h2 className="text-xl font-bold uppercase">Education</h2>
                 </div>
-
                 <div className="mb-6">
                     <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2013 - 2016</div>
-                    </div>
-
-                    <h3 className="text-lg font-bold mb-2">Ho Chi Minh City University of Information Technology</h3>
-                    <p className="text-gray-400 mb-4">Vietnam</p>
-                    <p className="text-gray-400">
-                        University Of HCMUT is One Of The National Universities In HCM, VN.
-                    </p>
-                </div>
-                <div className="mb-6">
-                    <div className="flex justify-between items-start mb-2">
-                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2016 - 2020</div>
+                        <div className="bg-gray-700 text-xs px-2 py-1 rounded">2015 - 2019</div>
                     </div>
 
                     <h3 className="text-lg font-bold mb-2">Posts and Telecommunications Institute of Technology</h3>
