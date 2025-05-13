@@ -120,12 +120,12 @@ export const comments = [
 
 export const testimonials = [
     {
-        quote: "Working with Antero has been a pleasure. He provided excellent clarity on project requirements, scope and the vision of the project. All expectations and requirements were communicated upfront, and he was responsive to any of my requests for clarification. Antero - I enjoyed working with you and hope to have a long business relationship.",
+        quote: "Working with Anh has been a pleasure. He provided excellent clarity on project requirements, scope and the vision of the project. All expectations and requirements were communicated upfront, and he was responsive to any of my requests for clarification. Antero - I enjoyed working with you and hope to have a long business relationship.",
         author: "Arthur C.",
         position: "CMO At Cropper"
     },
     {
-        quote: "Antero delivered our project ahead of schedule with exceptional quality. His blockchain expertise helped us overcome several technical challenges we'd been struggling with for months.",
+        quote: "Anh delivered our project ahead of schedule with exceptional quality. His blockchain expertise helped us overcome several technical challenges we'd been struggling with for months.",
         author: "Jane D.",
         position: "CTO at ARSNL"
     }
