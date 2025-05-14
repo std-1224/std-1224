@@ -21,7 +21,7 @@ const Resume = ({ className }: any) => {
                     <h2 className="text-xl font-bold uppercase">Experience</h2>
                 </div>
                 {experiences.map((experience, index) => (
-                    <div className="mb-12 border-b border-gray-800 pb-8" >
+                    <div className="mb-12 border-b border-gray-800 pb-8" key={index}>
                         <div className="flex justify-between items-start mb-2">
                             <div className="bg-gray-700 text-xs px-2 py-1 rounded">{experience.startDate} - {experience.endDate !== "" ? experience.endDate : experience.status}</div>
                         </div>

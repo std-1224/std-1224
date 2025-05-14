@@ -32,7 +32,7 @@ const ContentProfile = () => {
                 <div className="flex gap-2 mb-6">
                     <SocialIcon icon={<Mail size={18} />} href="mailto:aphuc1224.towork@gmail.com" />
                     <SocialIcon icon={<Github size={18} />} href="https://github.com/std-1224" />
-                    <SocialIcon icon={<Linkedin size={18}/>} href="https://www.linkedin.com/in/anh-phuc-785348364/" />
+                    <SocialIcon icon={<Linkedin size={18} />} href="https://www.linkedin.com/in/anh-phuc-785348364/" />
                 </div>
 
                 <div className='flex flex-row w-full absolute bottom-0 h-12'>
@@ -44,7 +44,10 @@ const ContentProfile = () => {
                     </button>
 
                     {/* LinkedIn Button */}
-                    <button className="w-1/2 flex items-center justify-center cursor-pointer text-gray-400 gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
+                    <button onClick={(e) => {
+                        e.stopPropagation()
+                        window.open("https://www.linkedin.com/in/anh-phuc-785348364/", '_blank')
+                    }} className="w-1/2 flex items-center justify-center cursor-pointer text-gray-400 gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
                         <Linkedin size={16} />
                         <span className="sm:text-[10px] lg:text-[14px]">MY LINKEDIN</span>
                     </button>
