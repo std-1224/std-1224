@@ -8,7 +8,8 @@ import {
     Mic,
     ExternalLink
 } from 'lucide-react';
-import { FaDice, FaDiscord } from 'react-icons/fa';
+import { BsMicrosoftTeams } from 'react-icons/bs';
+import { FaDice } from 'react-icons/fa';
 const Stats = ({ className }: any) => {
     return (
         <div className={`flex-1 p-8 overflow-y-auto ${className}`} style={{ scrollbarWidth: 'thin' }}>
@@ -141,11 +142,11 @@ const Stats = ({ className }: any) => {
                     <a href="https://teams.microsoft.com/l/chat/?users=gilgamesh.1238.towork@outlook.com" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
                         <div className="flex items-center">
                             <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
-                                <Mic className="w-6 h-6 text-cyan-400" />
+                                <BsMicrosoftTeams className="w-6 h-6 text-cyan-400" />
                             </div>
                             <div>
-                                <h3 className="font-bold">Skype</h3>
-                                <p className="text-gray-400 text-sm">Let's connect via Skype</p>
+                                <h3 className="font-bold">Microsoft Teams</h3>
+                                <p className="text-gray-400 text-sm">Let's connect via Microsoft Teams</p>
                             </div>
                         </div>
                         <div className="group">
