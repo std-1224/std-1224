@@ -121,12 +121,12 @@ export const comments = [
 export const testimonials = [
     {
         quote: "Working with Anh has been a pleasure. He provided excellent clarity on project requirements, scope and the vision of the project. All expectations and requirements were communicated upfront, and he was responsive to any of my requests for clarification. Antero - I enjoyed working with you and hope to have a long business relationship.",
-        author: "Arthur C.",
-        position: "CMO At Cropper"
+        author: "Yellow",
+        position: "CMO At Stoned Ape Crew"
     },
     {
         quote: "Anh delivered our project ahead of schedule with exceptional quality. His blockchain expertise helped us overcome several technical challenges we'd been struggling with for months.",
         author: "Jane D.",
-        position: "CTO at ARSNL"
+        position: "CTO at Feefty"
     }
 ];

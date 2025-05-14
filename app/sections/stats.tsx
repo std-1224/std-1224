@@ -48,7 +48,7 @@ const Stats = ({ className }: any) => {
                 </div>
 
                 <div className="flex flex-col space-y-4">
-                    <a href="mailto:kalkaudy@gmail.com" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
+                    <a href="mailto:aphuc1224.towork@gmail.com.com" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
                         <div className="flex items-center">
                             <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
                                 <Mail className="w-6 h-6 text-orange-500" />
@@ -78,7 +78,7 @@ const Stats = ({ className }: any) => {
                         </div>
                     </a>
 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
+                    <a href="https://www.linkedin.com/in/anh-phuc-785348364/" target="_blank" rel="noopener noreferrer" className="group bg-gray-800 p-4 rounded-lg flex items-center justify-between hover:bg-gray-700 transition-colors duration-200">
                         <div className="flex items-center">
                             <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
                                 <Linkedin className="w-6 h-6 text-blue-500" />

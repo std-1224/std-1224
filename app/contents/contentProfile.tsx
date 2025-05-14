@@ -4,7 +4,7 @@ import { Mail, Github, Linkedin, Image, MessageCircle, Camera, Download } from '
 
 const ContentProfile = () => {
     const handleDownloadCV = () => {
-        const fileName = 'CV_Anh_Nguyen_Ngoc_Phuc.pdf';
+        const fileName = 'CV_Anh_Phuc.pdf';
         const filePath = `./${fileName}`;
         const link = document.createElement('a');
         link.href = filePath;
@@ -23,26 +23,34 @@ const ContentProfile = () => {
             <div className="flex flex-col items-center -mt-14 px-6 z-10">
 
                 <div className="rounded-full border-4 border-gray-800 overflow-hidden w-28 h-28">
-                    <img src="./Anh Nguyen Ngoc Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
+                    <img src="./Anh Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
                 </div>
-                <h1 className="text-xl font-bold mt-4">Anh Nguyen Ngoc Phuc</h1>
+                <h1 className="text-xl font-bold mt-4">Anh Phuc</h1>
                 <p className="text-yellow-500 mb-6">Full Stack Engineer</p>
 
                 {/* Social Links */}
                 <div className="flex gap-2 mb-6">
-                    <SocialIcon icon={<Mail size={18} />} />
-                    <SocialIcon icon={<Github size={18} />} />
-                    <SocialIcon icon={<Linkedin size={18} />} />
-                    <SocialIcon icon={<Image size={18} />} />
-                    <SocialIcon icon={<Camera size={18} />} />
-                    <SocialIcon icon={<MessageCircle size={18} />} />
+                    <SocialIcon icon={<Mail size={18} />} onClick={(e: any) => {
+                        e.stopPropagation();
+                        window.open('mailto:aphuc1224.towork@gmail.com', '_blank');
+                    }} />
+                    <SocialIcon icon={<Github size={18} />} 
+                    onClick={(e: any) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/std-1224', '_blank');
+                    }} />
+                    <SocialIcon icon={<Linkedin size={18} />} 
+                    onClick={(e: any) => {
+                        e.stopPropagation();
+                        window.open('https://www.linkedin.com/in/anh-phuc-785348364/', '_blank');
+                    }} />
                 </div>
 
                 <div className='flex flex-row w-full absolute bottom-0 h-12'>
 
                     {/* Download CV Button */}
                     <button onClick={() => handleDownloadCV()} className="flex w-1/2 items-center border-r-1 cursor-pointer text-gray-400 justify-center gap-2 bg-gray-700 hover:bg-gray-600 hover:text-gray-300 py-2 px-3 text-sm">
-                        <Download size={16} className="animate-bounce text-yellow-400"/>
+                        <Download size={16} className="animate-bounce text-yellow-400" />
                         <span className="sm:text-[10px] lg:text-[14px]">DOWNLOAD CV</span>
                     </button>
 

@@ -16,9 +16,9 @@ const Sidebar = ({ setSidebarOpen, sidebarOpen, setActiveTab, activeTab }: any) 
             {/* Profile section */}
             <div className="flex flex-col items-center px-6 pb-8">
                 <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
-                    <img src="./Anh Nguyen Ngoc Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
+                    <img src="./Anh Phuc.jpeg" alt="Anh" className="w-full h-full object-cover" />
                 </div>
-                <h2 className="text-white text-xl font-medium mb-4">Anh Nguyen Ngoc Phuc</h2>
+                <h2 className="text-white text-xl font-medium mb-4">Anh Phuc</h2>
 
                 {/* Social links */}
                 <div className="flex justify-center gap-3 mb-6">

@@ -35,7 +35,7 @@ const ContactSection = () => {
                 <li className='text-gray-300 text-base uppercase'>
                     Email
                     <span className='mx-2'>. . . .</span>
-                    <span className='text-gray-400 normal-case'>kalkaudy@gmail.com</span>
+                    <span className='text-gray-400 normal-case'>aphuc1224.towork@gmail.com.com</span>
                 </li>
                 <li className='text-gray-300 text-base uppercase'>
                     Freelance
