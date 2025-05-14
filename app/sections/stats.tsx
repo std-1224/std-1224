@@ -3,9 +3,7 @@ import {
     Github,
     Linkedin,
     MessageCircle,
-    // Discord, 
     Send,
-    Mic,
     ExternalLink
 } from 'lucide-react';
 import { BsMicrosoftTeams } from 'react-icons/bs';

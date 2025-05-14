@@ -155,8 +155,8 @@ const AboutMe = ({ className }: any) => {
                             <div className="relative bg-gray-800 bg-opacity-30 p-8 h-full w-full">
                                 <div className="flex flex-col items-center">
                                     <div className="mb-4 text-center">
-                                        <p className="italic text-gray-400 px-4 md:px-8 mb-4 tracking-wide">
-                                            ❝ &nbsp; {testimonial.quote} &nbsp;❞
+                                        <p className="italic text-gray-400 px-4 text-xs md:text-sm lg:text-lg md:px-8 mb-4 tracking-wide">
+                                            ❝&nbsp;{testimonial.quote}&nbsp;❞
                                         </p>
                                     </div>
 
